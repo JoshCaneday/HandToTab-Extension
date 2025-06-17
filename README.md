@@ -1,1 +1,1 @@
-# HandToCursorExtension
+# HandToChromeExtension
