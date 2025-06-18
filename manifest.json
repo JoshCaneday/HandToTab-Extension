@@ -1,10 +1,23 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
+  "author": "Joshua Caneday",
+  "name": "HandToTab",
+  "description": "Uses EMG to control tabs",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "index.html",
+    "default_icon": "images/template.png"
+  },
+  "icons": {
+    "16": "images/template.png",
+    "32": "images/template.png",
+    "64": "images/template.png"
+  },
+  "permissions": ["tabs", "scripting", "tabGroups"],
+  "host_permissions": ["<all_urls>"],
+  "homepage_url": "https://github.com/JoshCaneday/HandToTab-Extension",
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
   }
 }
