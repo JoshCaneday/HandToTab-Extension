@@ -69,15 +69,10 @@ function init(){
             if (e.data.size > 0) {
                 recordedChunks.push(e.data);
 
-                fetch("https://localhost:3000/add-data", {
+                fetch("https://localhost:3000/infer", {
                     method: "POST",
                     body: e.data
                 })
-                .then(res => res.json())
-                .then(data => console.log("Upload success:", data))
-                .catch(err => console.error("Upload failed:", err));
-
-                fetch("https://localhost:3000/get-inference")
                 .then(res => res.json())
                 .then(data => console.log("Upload success:", data))
                 .catch(err => console.error("Upload failed:", err));
